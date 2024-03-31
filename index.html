@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlight Designing Agency</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.5.1/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/swiper.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+
+        background-image: url('./assets/img/bg-final.png');
+        background-size: 100% auto;
+        background-repeat: repeat-y;
+        font-family: "Poppins", sans-serif;
+        overflow-x: hidden;
+    }
+
+    #top-header {
+        display: flex;
+        justify-content: space-between;
+        padding: .8rem 1rem .8rem 8.5rem;
+        align-items: center;
+        z-index: 99999;
+    }
+
+    #logo img {
+        height: 66px;
+    }
+
+    #top-header ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 2rem 8.65rem 2rem 10rem;
+        align-items: center;
+        list-style: none;
+        gap: 2.5rem;
+
+    }
+
+    #top-header ul li a {
+        color: #A2AAB7;
+        text-decoration: none;
+        font-size: .9rem;
+    }
+
+    #top-header ul li button {
+        color: #A2AAB7;
+        padding: 12px 25px;
+        font-size: .9rem;
+        background: #0E0D13;
+        border: 0;
+        border-radius: 7px;
+        position: relative;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    #top-header ul li button::before,
+    .nav-toggle button::before {
+        content: '';
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        bottom: -1px;
+        right: -1px;
+        background: linear-gradient(to top right, #70E0E7, #68238B);
+        z-index: -1;
+        border-radius: 7px;
+    }
+
+    .nav-toggle {
+        position: fixed;
+        transition: .3s;
+        top: 47px;
+        right: 50px;
+        opacity: 0;
+        z-index: 99999;
+        visibility: hidden;
+    }
+
+    .nav-toggle button {
+        left: 10px;
+        color: #A2AAB7;
+        width: 40px;
+        height: 40px;
+        font-size: .9rem;
+        background: #0E0D13;
+        border: 0;
+        border-radius: 7px;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 0 0 5px #70E0E71a, 0 0 20px #68238B;
+        transition: .3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-toggle button:hover {
+
+        box-shadow: 0 0 40px #68238B, 0 0 10px #70E0E71a;
+
+    }
+
+    #fake-logo {
+        display: none;
+    }
+
+    @media only screen and (max-width: 1086px) {
+        #top-header.collapse {
+            position: fixed;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            background: #0E0D13;
+            width: 100%;
+            height: 100vh;
+            padding: 0;
+
+        }
+
+        #top-header.collapse ul {
+            padding: 0;
+            flex-direction: column;
+            display: flex;
+
+        }
+
+        #top-header ul {
+            padding: 0;
+            flex-direction: column;
+            display: none;
+        }
+
+        .nav-toggle {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #top-header.collapse>.nav-toggle button {
+            width: 60px;
+            height: 60px;
+        }
+
+        #logo {
+            display: none;
+            padding: 65px;
+            color: #fff;
+        }
+
+        #fake-logo {
+            display: block;
+            color: #fff;
+        }
+
+        #top-header.collapse>#logo {
+            display: block;
+
+        }
+
+        #top-header.collapse>#fake-logo {
+            display: none;
+
+        }
+    }
+
+
+    #home {
+        padding-top: 5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    #home h1 {
+        font-weight: 500;
+        font-size: 2.5rem;
+        color: #fff;
+        line-height: 50px;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    #home p {
+        margin: 0;
+        padding: 0;
+
+        /* padding-top: 10px; */
+        font-size: 1.1rem;
+        color: #A2AAB7;
+    }
+
+    #home .button {
+        /* background: #000; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 49px;
+    }
+
+    .button a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 141px;
+        height: 46px;
+        font-size: .9rem;
+        background: linear-gradient(63deg, #26dbe2, #1f80e6);
+        border-radius: 10px;
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+
+
+    /* ////////////////////////// sllide //////////////////////////////// */
+    .slide-box {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+        padding-top: 45px;
+    }
+
+    @media (max-width:700px) {
+        .slide-box {
+            gap: 10px !important;
+        }
+
+    }
+
+    .slide {
+        width: 10%;
+        border-radius: 16px;
+        height: 480px;
+        background: #757d80;
+        overflow: hidden;
+    }
+
+    .slide img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide:nth-child(1) {
+        width: 14.2%;
+        height: 430px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .slide:nth-child(2) {
+        width: 20.2%;
+    }
+
+    .slide:nth-child(3) {
+        height: 310px;
+        width: 19.2%;
+    }
+
+    .slide:nth-child(4) {
+        width: 16.2%;
+    }
+
+    .slide:nth-child(5) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        height: 370px;
+        width: 21.2%;
+    }
+
+    #our_mission {
+        padding-top: 9.1rem;
+        width: 100%;
+        /* text-align: center; */
+    }
+
+    #customer_says {
+        margin-top: 7.1rem;
+        width: 100%;
+        position: relative;
+        /* text-align: center; */
+    }
+
+    #customer_says p {
+        margin: 0;
+        margin-top: 10px;
+        padding: 0;
+        line-height: 22px;
+        font-size: .95rem;
+        color: #A2AAB7;
+    }
+
+    #latest_news {
+        padding-top: 5.5rem;
+        width: 100%;
+        /* text-align: center; */
+    }
+
+    #latest_news p {
+        margin: 0;
+        margin-top: 10px;
+        padding: 0;
+        line-height: 22px;
+        font-size: .95rem;
+        color: #A2AAB7;
+    }
+
+    #our_service {
+        padding-top: 6.8rem;
+        width: 100%;
+        /* text-align: center; */
+    }
+
+    #our_mission h1 {
+        font-weight: 400;
+        font-size: 2.45rem;
+        color: #fff;
+        line-height: 50px;
+        margin: 0;
+        padding: 0;
+    }
+
+    #our_mission p {
+        margin: 0;
+        padding: 0;
+        line-height: 22px;
+        /* padding-top: 10px; */
+        font-size: 1rem;
+        color: #A2AAB7;
+    }
+
+    #our_mission span {
+        font-weight: 600;
+    }
+
+    .tags {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tags span {
+        margin: 5px 3px;
+        border-radius: 50px;
+        display: inline-block;
+        padding: 8px 21px;
+        background: #292C35;
+        font-size: .9rem;
+        color: #CADBEF;
+        font-weight: 400 !important;
+    }
+
+    .lib_btn_trigger button {
+        border-radius: 0;
+        font-size: 1.1rem;
+        color: #A2AAB7;
+        border: none;
+        border-bottom: 2px solid transparent;
+    }
+
+    .lib_btn_trigger button:hover,
+    .lib_btn_trigger button.active {
+        color: #fff;
+        border-bottom: 2px solid #ffffff;
+    }
+
+    .lib_screens .lib_src:not(.active) {
+        display: none;
+    }
+
+    .lib_src {
+        /* position: absolute; */
+        animation: slides 1s;
+
+    }
+
+    @keyframes slides {
+        from {
+            transform: translateX(50px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .card {
+        padding: 38px 44px;
+        background: #0D0E16;
+        backdrop-filter: blur(20px);
+        border: 2px solid #c7c7c71a;
+        border-radius: 14px;
+        color: #fff;
+        height: fit-content;
+    }
+
+    .main-card {
+        background: linear-gradient(27deg, #22b5e3, #162fe8);
+        border: none;
+
+    }
+
+    .main-card ul li {
+        color: #fff;
+        font-weight: 300;
+    }
+
+    .card h1 {
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+
+    .card h4 {
+        margin-top: 10px;
+        font-size: 1.35rem;
+    }
+
+    .card ul {
+        list-style: none;
+        color: #A2AAB7;
+        padding: 0;
+
+    }
+
+    .card ul li {
+        display: flex;
+        line-height: 30px;
+    }
+
+    .card ul li i {
+        margin-top: 8px;
+        font-size: .8rem;
+    }
+
+    .heading {
+        background: linear-gradient(34deg, #45d4da, #64a3e0);
+        /* Define your gradient here */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .fit_values_bg {
+        background-image: url(./assets/img/bg-banner.png);
+        background-position: center;
+        background-size: cover;
+        /* background: linear-gradient(70deg, #1d8ce3 , #142bde); */
+    }
+
+    .bg-contact {
+        background-image: url('./assets/img/bg-4.jpg');
+        background-position: center;
+        background-size: cover;
+        /* background: linear-gradient(70deg, #1d8ce3 , #142bde); */
+
+        position: relative;
+    }
+
+    .bg-contact::before {
+
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, #000000, transparent, #000000);
+        /* z-index: 0; */
+    }
+
+    #form {
+        box-shadow: 2px 2px 20px rgb(0 0 0 / 20%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #1e3138;
+        /* min-height: 700px; */
+        border-top: 5px solid #00adf7;
+        position: relative;
+        padding: 30px 0;
+    }
+
+    #form .contact_logo {
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        transform: translate(-50%);
+        height: 100px;
+
+    }
+
+    #form span {
+        top: 13px;
+        right: 20px;
+        position: absolute;
+        color: #96a6a9a1;
+        font-size: .9rem;
+    }
+
+    .form-control {
+        background: #23363d !important;
+        border: 1px solid #42565d;
+        border-radius: 2px;
+        min-height: 50px;
+        width: 100%;
+        margin-bottom: 14px;
+        color: #fff !important;
+    }
+
+    .form-control::placeholder {
+        color: #96a6a9;
+        font-size: .9rem;
+        font-style: italic;
+    }
+</style>
+
+<body>
+    <main>
+        <header class="" id="top-header">
+            <div class="pt-3" id="fake-logo"><img src="./assets/img/logo.png" alt=""></div>
+            <div class="nav-toggle">
+
+                <button><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div id="logo"><img src="./assets/img/logo.png" alt=""></div>
+            <div class="nav-link">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Our Pricing</a></li>
+                    <li>
+                        <div><button>Contact us</button></div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <section id="home" class="pt-5 pt-ms-0">
+
+            <h1 style="font-size: clamp(30px,2.5vw,2.5vw)"><span style="color: #59B1F6;">Welcome to</span> Star Light
+                Marketing</h1>
+
+            <h1 style="font-size: clamp(30px,2.5vw,2.5vw)">Illuminating Ideas, Crafting Excellence</h1>
+            <!-- <br> -->
+            <p style="padding-top:25px;">Unleast the power of Creativity & Innovation with Star Light Marketing.</p>
+
+            <p>We are your premier destination for cutting-edge design and development solutions.</p>
+            <div class="button"><a href="">Learn more</a></div>
+        </section>
+        <section id="slider">
+            <div class="slide-box">
+                <div class="slide"><img src="./assets/img/banner-top-07.jpeg" alt=""></div>
+                <div class="slide"><img src="./assets/img/banner-top-01.jpeg" alt=""></div>
+                <div class="slide"><img src="./assets/img/banner-top-06.jpeg" alt=""></div>
+                <div class="slide"><img src="./assets/img/banner-top-04.png" alt=""></div>
+                <div class="slide"><img src="./assets/img/banner-top-05.png" alt=""></div>
+            </div>
+        </section>
+        <section id="our_mission">
+
+            <div class="text-center px-4 px-md-0">
+                <h1 style="font-size: clamp(30px,2.5vw,2.5vw);">We develop <span class="heading"
+                        style="color: #5F9BF5;">browser-based software</span> <br> that brings your compant forward</h1>
+
+
+            </div>
+
+            <style>
+                @media screen and (max-width:900px) {
+                    .padding-left-md {
+                        padding-left: 20px !important;
+                    }
+
+                    .padding-right-md {
+                        padding-right: 20px !important;
+                    }
+                }
+            </style>
+            <div class="row m-0 pt-5  px-5">
+                <div class="col-12 col-lg-8 pt-5 col-xl-6 padding-left-md" style="padding-left: 110px;">
+                    <h1 style="font-size: 2.4rem;" class="mb-1">Our Mission</h1>
+                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                    <div class="tags mt-2">
+                        <span>Online Shop Product Configruator</span>
+                        <span>Survey Generator</span>
+                        <span>Enterprise Website Pagebuilder</span>
+                        <span>E Learning Platforms</span>
+                    </div>
+                </div>
+                <div class="d-none d-xl-block col-xl-5"><img src="./assets/img/Group 4.png" width="100%" alt=""></div>
+            </div>
+        </section>
+        <section id="our_service" class="">
+
+            <div class="text-center">
+                <h1><span class="heading" style="font-weight:600;">Our Services</span></h1>
+
+
+            </div>
+            <div class="d-flex flex-row flex-md-column">
+
+                <div class=" d-flex gap-4 flex-column flex-lg-row justify-content-center lib_btn_trigger"
+                    style="padding-top: 12px;">
+                    <button class="btn mx-4  px-0 active">Web Designing</button>
+                    <button class="btn mx-4  px-0">Web Development</button>
+                    <button class="btn mx-4  px-0">Logo Designing</button>
+                    <button class="btn mx-4  px-0">App Development</button>
+                    <button class="btn mx-4  px-0">Video Animation</button>
+                </div>
+                <div class="lib_screens  mt-5 pt-3">
+                    <div class="row m-0 lib_src active">
+                        <div class="col-7 d-none d-lg-block text-center"><img height="100%"
+                                src="./assets/img/lib-app-dev-01-ss.png" alt="">
+                        </div>
+                        <div class="col-12 col-lg-5 ps-4 pe-5 ">
+                            <div class="pe-2 ps-5 ps-lg-0 pe-lg-5">
+
+                                <h1 class="text-white">Individually developed Web applications</h1>
+                                <p class="" style="color: #757d80;">Quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <div class="button mt-4"><a style="width: 250px;" href="">Go to Web Development</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 lib_src ">
+                        <div class="col-7 d-none d-lg-block text-center"><img height="100%"
+                                src="./assets/img/lib-app-dev-01-ss.png" alt="">
+                        </div>
+                        <div class="col-12 col-lg-5 ps-4 pe-5 ">
+                            <div class="pe-2 ps-5 ps-lg-0 pe-lg-5">
+
+                                <h1 class="text-white">Individually developed Web applications</h1>
+                                <p class="" style="color: #757d80;">Quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <div class="button mt-4"><a style="width: 250px;" href="">Go to Web Development</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 lib_src ">
+                        <div class="col-7 d-none d-lg-block text-center"><img height="100%"
+                                src="./assets/img/lib-app-dev-01-ss.png" alt="">
+                        </div>
+                        <div class="col-12 col-lg-5 ps-4 pe-5 ">
+                            <div class="pe-2 ps-5 ps-lg-0 pe-lg-5">
+
+                                <h1 class="text-white">Individually developed Web applications</h1>
+                                <p class="" style="color: #757d80;">Quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <div class="button mt-4"><a style="width: 250px;" href="">Go to Web Development</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 lib_src ">
+                        <div class="col-7 d-none d-lg-block text-center"><img height="100%"
+                                src="./assets/img/lib-app-dev-01-ss.png" alt="">
+                        </div>
+                        <div class="col-12 col-lg-5 ps-4 pe-5 ">
+                            <div class="pe-2 ps-5 ps-lg-0 pe-lg-5">
+
+                                <h1 class="text-white">Individually developed Web applications</h1>
+                                <p class="" style="color: #757d80;">Quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <div class="button mt-4"><a style="width: 250px;" href="">Go to Web Development</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-0 lib_src ">
+                        <div class="col-7 d-none d-lg-block text-center"><img height="100%"
+                                src="./assets/img/lib-app-dev-01-ss.png" alt="">
+                        </div>
+                        <div class="col-12 col-lg-5 ps-4 pe-5 ">
+                            <div class="pe-2 ps-5 ps-lg-0 pe-lg-5">
+
+                                <h1 class="text-white">Individually developed Web applications</h1>
+                                <p class="" style="color: #757d80;">Quis nostrud exercitation ullamco laboris nisi ut
+                                    aliquip ex ea commodo consequat. Duis aute
+                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                                <div class="button mt-4"><a style="width: 250px;" href="">Go to Web Development</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row m-0 lib_src">
+                    <div class="col-7  text-center"><img height="100%" src="./assets/img/lib-app-dev-01-ss.png" alt="">
+                    </div>
+                    <div class="col-5 ps-4 pe-5 ">
+                        <div class="pe-5">
+
+                            <h1 class="text-white">Individually developed Web applications</h1>
+                            <p class="" style="color: #757d80;">Quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <div class="button mt-4"><a style="width: 250px;" href="">Go to Web Development</a></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0 lib_src">
+                    <div class="col-7  text-center"><img height="100%" src="./assets/img/lib-app-dev-01-ss.png" alt="">
+                    </div>
+                    <div class="col-5 ps-4 pe-5 ">
+                        <div class="pe-5">
+
+                            <h1 class="text-white">Individually developed Web applications</h1>
+                            <p class="" style="color: #757d80;">Quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <div class="button mt-4"><a style="width: 250px;" href="">Go to Web Development</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0 lib_src">
+                    <div class="col-7  text-center"><img height="100%" src="./assets/img/lib-app-dev-01-ss.png" alt="">
+                    </div>
+                    <div class="col-5 ps-4 pe-5 ">
+                        <div class="pe-5">
+
+                            <h1 class="text-white">Individually developed Web applications</h1>
+                            <p class="" style="color: #757d80;">Quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <div class="button mt-4"><a style="width: 250px;" href="">Go to Web Development</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-0 lib_src">
+                    <div class="col-7  text-center"><img height="100%" src="./assets/img/lib-app-dev-01-ss.png" alt="">
+                    </div>
+                    <div class="col-5 ps-4 pe-5 ">
+                        <div class="pe-5">
+
+                            <h1 class="text-white">Individually developed Web applications</h1>
+                            <p class="" style="color: #757d80;">Quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat. Duis aute
+                                irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <div class="button mt-4"><a style="width: 250px;" href="">Go to Web Development</a></div>
+                        </div>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+        </section>
+        <section id="our_service" class="">
+
+            <div class="">
+                <h1 style="padding-left: 150px;" class="padding-left-md"><span class="heading"
+                        style="font-weight:600;">Our Pricing</span></h1>
+
+                <div class="mt-4 row row-cols-1 row-cols-lg-2 row-cols-xl-3 d-flex justify-content-center  padding-left-md padding-right-md"
+                    style="padding: 10px 150px;">
+                    <div class="col mb-3 card">
+                        <h1>$799</h1>
+                        <h4>Startup Website</h4>
+                        <ul>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Page Website</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Custom Layout Design</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Contact/Query Form</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>banner Design</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Stock Photos</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Free Favicon Design</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Free Google Friendly Sitemap</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Unlimited Revisions</div>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="col mb-3 px-0 px-lg-3">
+
+                        <div class=" card main-card">
+                            <h1>$1799</h1>
+                            <h4>E-Commerce Website</h4>
+                            <ul>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Custom Ecommerce Website</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Up to 200 Products</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>CMS /Admin Panel Integration</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Fully Mobile Responsive</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Shopping Cart Integration</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Payment Gateway Integration</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Product Listing & Management</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Order Management & Tracking</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Unlimited Revisions</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>FREE Social Media Integration</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>FREE Google Friendly Sitemap</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Search Engine Submission</div>
+                                </li>
+                                <li><i class="fa-light fa-circle text-white me-2"></i>
+                                    <div>Complete Source Files</div>
+                                </li>
+                            </ul>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col mb-3 card">
+                        <h1>$1199</h1>
+                        <h4>Professional Website</h4>
+                        <ul>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Up to 10 Unique Pages Website</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>CMS /Admin Panel Integration</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>5+ Stock Photos & Banner Designs</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>FREE Social Media Integration</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>FREE Favicon Design</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>FREE Google Friendly Sitemap</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Unlimited Revisions</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Cross Browser Compatible</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Complete W3C Certified HTML</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Website Initial Concepts in 48 Hours</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Complete Design & Deployment</div>
+                            </li>
+                            <li><i class="fa-light fa-circle text-primary me-2"></i>
+                                <div>Custom, Interactive & Dynamic Web Design</div>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="latest_news">
+            <div class="text-center d-flex align-items-center flex-column">
+
+                <h1 class="text-light fw-normal">Read the <span style="color:#6299F6;font-weight:600;">Latest
+                        News</span></h1>
+                <p class="col-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum atque, tenetur animi
+                    inventore nisi accusamus voluptatem eum aspernatur modi repudiandae.</p>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <div class="row">
+
+                            <div class="content col-12 col-md-7">
+                                <span>23 December 2023</span>
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae
+                                    consequuntur
+                                    repellat quibusdam tempora officiis eos magni! Veritatis, eligendi nihil.</p>
+                            </div>
+                            <div class="d-none d-md-block col-md-5">
+
+                                <img src="./assets/img/banner-top-01.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="row">
+
+                            <div class="content col-12 col-md-7">
+                                <span>23 December 2023</span>
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae
+                                    consequuntur
+                                    repellat quibusdam tempora officiis eos magni! Veritatis, eligendi nihil.</p>
+                            </div>
+                            <div class="d-none d-md-block col-md-5">
+
+                                <img src="./assets/img/banner-top-01.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="row">
+
+                            <div class="content col-12 col-md-7">
+                                <span>23 December 2023</span>
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae
+                                    consequuntur
+                                    repellat quibusdam tempora officiis eos magni! Veritatis, eligendi nihil.</p>
+                            </div>
+                            <div class="d-none d-md-block col-md-5">
+
+                                <img src="./assets/img/banner-top-01.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="row">
+
+                            <div class="content col-12 col-md-7">
+                                <span>23 December 2023</span>
+                                <h4>Lorem ipsum dolor sit amet</h4>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae
+                                    consequuntur
+                                    repellat quibusdam tempora officiis eos magni! Veritatis, eligendi nihil.</p>
+                            </div>
+                            <div class="d-none d-md-block col-md-5">
+
+                                <img src="./assets/img/banner-top-01.jpeg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="col-12 pt-2">
+                <div class="button mt-4 d-flex justify-content-center ">
+                    <a href="" style="width: 184px;">Read More Blogs</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="customer_says" class="">
+            <div class="">
+                <h1 style="padding-left: 150px;font-weight:300;" class="text-white padding-left-md">What Our <span
+                        style="color:#5D99F5;font-weight:600;">Customer Says </span></h1>
+
+            </div>
+            <div class="swiper padding-left-md padding-right-md QuoteSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <div class="row">
+
+                            <div class="content padding-left-md padding-right-md  col-12 col-md-12">
+                                <p>"Star Light Marketing exceeded our expectations in every way. Their team's commitment
+                                    to delivering a website that perfectly reflects our brand was evident throughout the
+                                    process. The result?"</p>
+
+                                <div class="mt-4 d-flex gap-3 align-items-center">
+                                    <div class=" d-md-block rounded-circle"
+                                        style="width: 50px;height:50px;overflow:hidden;">
+                                        <img src="./assets/img/a.jpg" alt="">
+                                    </div>
+                                    <div>
+
+                                        <h6 style="line-height: 10px;" class="mb-0">SARAH THOMPSON</h6>
+                                        <span>CEO, Tech Innovation Inc.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="row">
+
+                            <div class="content padding-left-md padding-right-md  col-12 col-md-12">
+                                <p>"Working with Star Light Marketing was a game-changer for our business. Their digital
+                                    marketing strategies not only increased our online visibility but also drove
+                                    tangible results. The team's professionalism and attention to detail make them stand
+                                    out. We highly recommend.”
+                                    “ their services to anyone looking to elevate their digital marketing efforts."</p>
+
+                                <div class="mt-4 d-flex gap-3 align-items-center">
+                                    <div class=" d-md-block rounded-circle"
+                                        style="width: 50px;height:50px;overflow:hidden;">
+                                        <img src="./assets/img/a.jpg" alt="">
+                                    </div>
+                                    <div>
+
+                                        <h6 style="line-height: 10px;" class="mb-0">James Rodriguez</h6>
+                                        <span>Marketing Director, Global Trends Co.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper-slide ">
+                        <div class="row">
+
+                            <div class="content padding-left-md padding-right-md  col-12 col-md-12">
+                                <p>"Working with Star Light Marketing was a game-changer for our business. Their digital
+                                    marketing strategies not only increased our online visibility but also drove
+                                    tangible results. The team's professionalism and attention to detail make them stand
+                                    out. We highly recommend.”
+                                    “ their services to anyone looking to elevate their digital marketing efforts."</p>
+
+                                <div class="mt-4 d-flex gap-3 align-items-center">
+                                    <div class=" d-md-block rounded-circle"
+                                        style="width: 50px;height:50px;overflow:hidden;">
+                                        <img src="./assets/img/a.jpg" alt="">
+                                    </div>
+                                    <div>
+
+                                        <h6 style="line-height: 10px;" class="mb-0">James Rodriguez</h6>
+                                        <span>Marketing Director, Global Trends Co.</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="slide-navigation">
+                <div class="swiper-button-prev"><i class="fa-light fa-arrow-left-long"></i></div>
+                <div class="swiper-button-next"><i class="fa-light fa-arrow-right-long"></i></div>
+            </div>
+        </section>
+        <section id="fit_values" class="px-4 me-0 d-flex justify-content-center mt-5 pt-4">
+            <div class="col-12 col-md-10 px-1 ">
+                <div style="min-height: 300px;"
+                    class="text-white py-5 py-md-0 rounded-4 d-flex justify-content-center align-items-center flex-column fit_values_bg">
+
+                    <h1 class="fw-bold">Do you fit our values?</h1>
+                    <p class="col-10 col-lg-5 text-center">At Star Light Marketing, our values are the guiding force
+                        behind everything we do.
+                        We believe in fostering a
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center align-items-center mt-3 flex-wrap px-5">
+                        <div class="px-4 py-2 border border-white rounded-pill ">Senior Web Entwickler/in</div>
+                        <div class="px-4 py-2 border border-white rounded-pill ">UI/UX Designer/in</div>
+                        <div class="px-4 py-2 border border-white rounded-pill ">Marketing Expert/in</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="margin-top: 80px;">
+            <div class="bg-contact padding-left-md padding-right-md" style="padding: 0 155px;">
+                <div class="row py-5">
+                    <div class="col-12 col-lg-6">
+                        <div class="position-relative">
+                            <h3 class=" text-white fw-normal">CONTACT US</h3>
+                            <h1 class="display-1 text-white fw-bold">LET'S DO SOMETHING GREAT TOGETHER</h1>
+                        </div>
+                    </div>
+                    <div id="form" class="col-12 col-lg-6">
+                        <img src="./assets/img/simple-logo.png" class="contact_logo" alt="">
+                        <div class="text-white text-center py-4 pt-5">
+
+                            <h5 style="font-weight: 600;">Fill In This Form And Send Us An Email</h5>
+                            <h5 style="font-weight: 600;">With Your Inquiry</h5>
+                        </div>
+                        <form class="col-10" action="">
+                            <div class="position-relative">
+
+                                <input class="form-control" type="text" placeholder="Full name">
+                                <span><i class="fa-solid fa-user"></i></span>
+                            </div>
+                            <div class="position-relative">
+                                <input class="form-control" type="text" placeholder="Email address">
+                                <span><i class="fa-solid fa-envelope"></i></span>
+
+                            </div>
+                            <div class="position-relative">
+                                <input class="form-control" type="text" placeholder="Phone no">
+                                <span><i class="fa-solid fa-phone"></i></span>
+
+                            </div>
+                            <div class="position-relative">
+                                <input class="form-control" type="text" placeholder="Subject">
+                                <span><i class="fa-solid fa-edit"></i></span>
+
+                            </div>
+                            <div class="position-relative">
+                                <input class="form-control" type="text" placeholder="Zip code">
+                                <span><i class="fa-solid fa-globe"></i></span>
+
+                            </div>
+                            <div class="position-relative">
+                                <textarea name="" id="" cols="30" class="form-control" rows="6"
+                                    placeholder="Type your message"></textarea>
+                                <span><i class="fa-solid fa-message"></i></span>
+                            </div>
+                            <div class="button">
+                                <a href="" class="rounded-1">SUBMIT NOW</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .post-card {
+                background: #14172d;
+                border: 1px solid #212329;
+                border-radius: 5px;
+                overflow: hidden;
+                height: 100%;
+            }
+
+            .post-card h5 {
+                color: #fff;
+            }
+
+            .post-card img {
+                object-fit: cover;
+                width: 100%;
+                height: 200px;
+            }
+
+            .post-card p {
+                color: #A2AAB7;
+                font-size: .9rem;
+            }
+
+            .post-card button {
+                height: 40px;
+                padding: 0 35px;
+                margin-top: 30px;
+                font-size: .9rem;
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                color: #c1e1fd;
+                border: none;
+                border-radius: 5px;
+                background: #2b3138;
+            }
+        </style>
+        <section class="py-5 my-5 padding-left-md padding-right-md" style="padding: 0 155px;">
+            <h1 style="font-weight:300;" class="text-white"><span style="color:#5D99F5;font-weight:600;">IT Services
+                </span> With Impact</h1>
+            <div class="row mt-4">
+                <div class="c0l-12 col-md-6 col-xl-4 mb-4">
+                    <div class="post-card ">
+                        <img src="./assets/img/banner-top-01.jpeg" alt="">
+                        <div class="px-4 my-4">
+                            <h5>E-Mail</h5>
+                            <p>You prefer the first contact by e-mail?
+                                Simply write to us at hello</p>
+                            <button><i class="fa-regular fa-envelope"></i> Write Email <i
+                                    class="fa-regular fa-arrow-right"></i></button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="c0l-12 col-md-6 col-xl-4 mb-4">
+                    <div class="post-card ">
+                        <img src="./assets/img/banner-top-01.jpeg" alt="">
+                        <div class="px-4 my-4">
+                            <h5>Free Initial Consulation</h5>
+                            <p>Make an appointment for a free, no-
+                                obligation initial consulation with us on
+                                the phone</p>
+                            <button><i class="fa-regular fa-calender"></i> Schedule appointment <i
+                                    class="fa-regular fa-arrow-right"></i></button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="c0l-12 col-md-6 col-xl-4 mb-4">
+                    <div class="post-card ">
+                        <img src="./assets/img/banner-top-01.jpeg" alt="">
+                        <div class="px-4 my-4">
+                            <h5>Whatsapp</h5>
+                            <p>Do you have any other quetion
+                                Jut write to us via Whatsapp.</p>
+                            <button><i class="fa-regular fa-envelope"></i> Write on Whatsapp <i
+                                    class="fa-regular fa-arrow-right"></i></button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="text-center">
+                <img src="./assets/img/logo.png" height="50px" alt="">
+                <div class="text-center  fw-normal py-3" style="color:#96a6a9;font-size: .8rem;">
+                    Powered by Dark Verse Industries
+                </div>
+                <div class=" d-flex align-items-center pb-3 justify-content-center gap-4">
+                    <a href="facebook.com"><i class="text-white fa-brands fa-facebook-f"></i></a>
+                    <a href="facebook.com"><i class="text-white fa-brands fa-twitter"></i></a>
+                    <a href="facebook.com"><i class="text-white fa-brands fa-vimeo-v"></i></a>
+                    <a href="facebook.com"><i class="text-white fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+<script src="./assets/js/app.js"></script>
+<script src="./assets/js/swiper.js"></script>
+
+</html>

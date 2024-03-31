@@ -1,0 +1,148 @@
+.mySwiper {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0 !important;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #0F1015;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 10px;
+    max-width: 51vw;
+    
+    border: 2px solid #c7c7c71a;
+}
+
+.swiper-pagination-bullet {
+    width: 38px !important;
+    height: 3px !important;
+    border-radius: 50px !important;
+}
+
+.swiper-pagination-bullet:not(.swiper-pagination-bullet-active) {
+    background: #fff !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    height: 4px !important;
+    background: #75ECE1 !important;
+
+}
+
+.swiper-slide .content {
+    padding: 40px 45px;
+    text-align: left;
+}
+
+.swiper-slide .content span {
+    color: #6299F6;
+    font-weight: 500;
+    font-size: .85rem;
+}
+
+.swiper-slide .content h4 {
+    font-size: 1.5vw !important;
+}
+.swiper-slide .content h6 {
+    font-size: clamp(12px,1.3vw,1.3vw) !important;
+    /* line-height: ; */
+
+}
+
+.swiper-slide .content p {
+    font-size: clamp(12px, 1vw, 1vw) !important;
+    line-height: clamp(15px, 2vw, 2vw) !important;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    max-height: 300px;
+}
+
+@media screen and (max-width:600px) {
+    
+    /* .swiper-slide img {
+        position: absolute;
+    } */
+
+}
+
+.QuoteSwiper {
+    width: 100%;
+    height: 100%;
+    padding: 22px 152px !important;
+}
+
+.QuoteSwiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: rgba(13, 14, 20, 0.6);
+
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 8px;
+    max-width: 51vw;
+    min-height: 300px;
+    border: 2px solid #c7c7c71a;
+}
+
+.QuoteSwiper .swiper-slide .content {
+    padding: 40px 50px !important;
+}
+
+.QuoteSwiper .swiper-slide .content p {
+    font-size: clamp(12px, 1vw, 1vw) !important;
+    line-height: clamp(15px, 2vw, 2vw) !important
+}
+
+.QuoteSwiper .swiper-slide .content span {
+    color: #5a88c3;
+    font-weight: 400;
+    font-size: .7rem;
+}
+
+.slide-navigation {
+    position: absolute;
+    top: 25px;
+    right: 200px;
+}
+@media screen and (max-width:800px) {
+    .slide-navigation {
+        position: absolute;
+        top: 40px;
+        right: 50px;
+    }
+    .slide-navigation .swiper-button-next,.slide-navigation .swiper-button-prev{
+        font-size: 1.2rem !important;
+    }
+}
+.slide-navigation .swiper-button-next {
+    transform: rotate(180deg);
+}
+
+.slide-navigation .swiper-button-prev {
+    transform: rotate(-180deg);
+}
+
+.slide-navigation .swiper-button-prev::after,
+.slide-navigation .swiper-button-next::after {
+    content: "";
+}
+
+.slide-navigation .swiper-button-prev,
+.slide-navigation .swiper-button-next {
+    font-size: 2.3rem;
+    color: #fff;
+}
